@@ -1,0 +1,179 @@
+/* Global dark theme */
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Table style */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: monospace;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+.product-table tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+.product-table th {
+  background-color: #292929;
+  color: #fff;
+}
+
+.product-table tr:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* Form style */
+.product-form {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.product-form button {
+  background-color: #292929;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background-color: #444;
+}
+
+/* ProductView styling */
+.product-detail {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 600px;
+}
+
+.product-detail img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.create-btn {
+  background-color: #292929;
+  color: #fff;
+  padding: 10px 16px;
+  border: 1px solid #555;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.create-btn:hover {
+  background-color: #444;
+}
+
+.product-form {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make input/textarea fill width with internal padding */
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical; /* ✅ Only allow vertical resizing */
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+  outline: none;
+  border-color: #777;
+}
+
+/* Let form scale up to max width of parent container */
+@media (min-width: 768px) {
+  .product-form {
+    max-width: 800px;
+  }
+}
+
+.product-form button {
+  padding: 10px 18px;
+  background-color: #292929;
+  color: white;
+  border: 1px solid #555;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-form button:hover {
+  background-color: #444;
+}
+
+.error-text {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #862fd8; /* purple */
+  border-color: #aaa;
+}
