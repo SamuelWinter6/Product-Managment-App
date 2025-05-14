@@ -1,16 +1,32 @@
+// Import Axios for HTTP requests
 import axios from 'axios';
 
-// Replace this with your actual Render backend URL when deployed
-// const BASE_URL = 'https://your-backend.onrender.com';
+// ===========================
+// API Base URL Configuration
+// ===========================
 
-// ✅ Use this for local backend:
+// ✅ For development with local backend:
+// Replace this with your deployed backend URL for production (e.g. Render)
 const BASE_URL = 'http://localhost:5000';
+// const BASE_URL = 'https://your-backend.onrender.com'; // <-- Use this in production
 
+// Create a pre-configured Axios instance for cleaner API calls
 const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL: BASE_URL, // All requests will prefix this URL
 });
 
+// ===========================
+// Product API Endpoints
+// ===========================
+
+// GET: Retrieve all products
 export const getProducts = () => api.get('/products');
+
+// POST: Add a new product to the database
 export const addProduct = (product) => api.post('/products', product);
+
+// PUT: Update an existing product by ID
 export const updateProduct = (id, product) => api.put(`/products/${id}`, product);
+
+// DELETE: Remove a product by ID
 export const deleteProduct = (id) => api.delete(`/products/${id}`);
