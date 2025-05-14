@@ -9,7 +9,7 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
   ssl: {
-    ca: fs.readFileSync(process.env.DB_SSL_CA)
+  ca: fs.readFileSync('/etc/secrets/ca.pem')
   },
   waitForConnections: true,
   connectionLimit: 10,
